@@ -92,18 +92,27 @@ const QuestionHandler = {
 
 // Responds to "tell study hub my answer is ___"
 const AnswerHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent';
-  },
-  handle(handlerInput) {
-    const speakOutput = 'flashcard answer here';
-    
-    return handlerInput.responseBuilder
-      .speak(speakOutput)
-      .getResponse();
-  }
-};
+    canHandle(handlerInput) {
+      return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent';
+    },
+    handle(handlerInput) {
+      const response = handlerInput.requestEnvelope.request.intent.slots.NameResponse.value
+        || handlerInput.requestEnvelope.request.intent.slots.AnimalResponse.value
+        || handlerInput.requestEnvelope.request.intent.slots.ColorResponse.value;
+      const correctAnswer = 'flashcard answer here';
+      
+      if (response === correctAnswer) {
+        return handlerInput.responseBuilder
+        .speak("Correct!")
+        .getResponse();
+      }
+      
+      return handlerInput.responseBuilder
+        .speak("The correct answer is: " + correctAnswer)
+        .getResponse();
+    }
+  };
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
