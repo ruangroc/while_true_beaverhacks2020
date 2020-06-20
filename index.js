@@ -99,6 +99,7 @@ function askQuestion(handlerInput) {
   var random = Math.floor(Math.random() * numCards);
   console.log(random);
   attributes.speechOutput = flashcards[random]['q'];
+  attributes.correctAnswer = flashcards[random]['a'];
   const speakOutput = flashcards[random]['q'];
   
   return handlerInput.responseBuilder
@@ -127,7 +128,7 @@ const AnswerHandler = {
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
     const response = handlerInput.requestEnvelope.request.intent.slots.answer.value;
-    const correctAnswer = flashcards[0]['a'];
+    const correctAnswer = attributes.correctAnswer;
     var speakOutput = '';
     
     if (response === correctAnswer) {
