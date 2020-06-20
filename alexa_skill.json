@@ -1,0 +1,87 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "study hub",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help me",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit",
+                        "quit",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "hi"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "QuestionIntent",
+                    "slots": [],
+                    "samples": [
+                        "help me study",
+                        "start studying",
+                        "quiz me",
+                        "ask me a question",
+                        "ask me",
+                        "test me",
+                        "give me a flashcard",
+                        "give me a question"
+                    ]
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "Is it {answer}",
+                        "I think it's {answer}",
+                        "My answer is {answer}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": [
+                        "what was that",
+                        "say it again",
+                        "repeat flashcard",
+                        "repeat",
+                        "repeat question"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
