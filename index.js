@@ -1,5 +1,6 @@
 const Alexa = require('ask-sdk-core');
 const flashcards = require('flashcards')['flashcards'];
+const numCards = flashcards.length;
 
 // Responds to "study hub"
 const LaunchRequestHandler = {
@@ -94,8 +95,11 @@ function askQuestion(handlerInput) {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
   attributes.numberCorrect = 0;
   console.log(flashcards);
-  attributes.speechOutput = flashcards[0]['q'];
-  const speakOutput = flashcards[0]['q'];
+  console.log(flashcards.length);
+  var random = Math.floor(Math.random() * numCards);
+  console.log(random);
+  attributes.speechOutput = flashcards[random]['q'];
+  const speakOutput = flashcards[random]['q'];
   
   return handlerInput.responseBuilder
     .speak(speakOutput)
