@@ -53,7 +53,7 @@
                     "slots": [
                         {
                             "name": "answer",
-                            "type": "AMAZON.Color"
+                            "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
