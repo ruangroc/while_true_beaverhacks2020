@@ -1,4 +1,5 @@
 const Alexa = require('ask-sdk-core');
+const flashcards = require('flashcards')['flashcards'];
 
 // Responds to "study hub"
 const LaunchRequestHandler = {
@@ -92,8 +93,9 @@ const ErrorHandler = {
 function askQuestion(handlerInput) {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
   attributes.numberCorrect = 0;
-  attributes.speechOutput = 'flashcard prompt here';
-  const speakOutput = 'flashcard prompt here';
+  console.log(flashcards);
+  attributes.speechOutput = flashcards[0]['q'];
+  const speakOutput = flashcards[0]['q'];
   
   return handlerInput.responseBuilder
     .speak(speakOutput)
@@ -121,7 +123,7 @@ const AnswerHandler = {
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
     const response = handlerInput.requestEnvelope.request.intent.slots.answer.value;
-    const correctAnswer = 'flashcard answer here';
+    const correctAnswer = flashcards[0]['a'];
     var speakOutput = '';
     
     if (response === correctAnswer) {
