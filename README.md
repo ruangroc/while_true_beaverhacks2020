@@ -17,6 +17,9 @@
   Alexa Developer Console
   ![Third](https://user-images.githubusercontent.com/43560455/85236828-43cb6d80-b3d6-11ea-937c-4db6b5f05f37.png)
 
+  AWS Lambda Function, where we initially developed the handler functions
+  ![Fourth](https://user-images.githubusercontent.com/43560455/85237130-25b33c80-b3d9-11ea-835d-a6cb8a8bba84.png)
+
   ...(fill in more pictures here)
 
 <h2>What We Learned</h2>
