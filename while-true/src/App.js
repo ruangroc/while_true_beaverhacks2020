@@ -23,20 +23,16 @@ const App = () => {
       aValues={answerVals[i]}
     />
   ));
-  
-  //Try typing in any field and see the change in real-time:
-  console.log(questionVals);
-  console.log(answerVals); 
 
   return (
     <div className="app-wrapper">
       <div className="app">
         <header className="app-header">
-          Study Hub
+          The Study Hub!
         </header>
         { flashCards }
         <div className="button-wrapper">
-          <Button id="create-deck-button" variant="contained" color="primary">
+          <Button id="create-deck-button" variant="contained" color="primary" size="large" style={{backgroundColor: "darkorange"}}>
             Create Deck
           </Button>
         </div>
