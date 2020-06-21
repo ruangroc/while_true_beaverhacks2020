@@ -14,7 +14,7 @@ function App() {
           Study Hub
         </header>
         {
-          nums.map((i) => { return <div className="flash-card-wrapper"> <FlashCard id={i}/> </div> })
+          nums.map((i) => { return <div className="flash-card-wrapper" key={i}> <FlashCard id={i}/> </div> })
         }
         <div className="button-wrapper">
           <Button id="create-deck-button" variant="contained" color="primary">
