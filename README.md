@@ -7,7 +7,9 @@
   The webpage was made with Node.js, React, and JS/HTML/CSS. We used... (fill in stuff about server and alexa here)
   
 <h2>Images</h2>
-  ... (fill in pictures here)
+  ![First](https://cdn.discordapp.com/attachments/723233269449097328/724375068351922286/Annotation_2020-06-21_142711.png)
+  ![Second](https://cdn.discordapp.com/attachments/723233269449097328/724375080339243108/Annotation_2020-06-21_142712.png)
+  ... (fill in more pictures here if needed)
 
 <h2>What We Learned</h2>
   It was our first time making new Amazon Alexa skills. We learned how to... (fill in stuff about server and alexa here)
