@@ -1,5 +1,34 @@
-.App {
+.app-wrapper {
   text-align: center;
+  background-color: whitesmoke;
+}
+
+.app {
+  display: inline-block;
+}
+
+.app-header {
+  padding-bottom: 10%;
+  transform: scaleY(10%);
+  font-size: 100px;
+  font-weight: bolder;
+  color: rgb(34, 34, 34);
+}
+
+.flash-card {
   display: grid;
-  width: fit-content;
+  grid-template-areas: 
+  'left right';
+  grid-column-gap: 20px;
+  padding: 10px;
+}
+
+.flash-card-wrapper {
+  text-align: left;
+  border-bottom: dotted;
+  border: black;
+}
+
+.button-wrapper {
+  padding-top: 8%;
 }
