@@ -93,7 +93,10 @@ const ErrorHandler = {
 
 function askQuestion(handlerInput) {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  attributes.numberCorrect = 0;
+  console.log(attributes.numberCorrect);
+  if (!attributes.numberCorrect) {
+    attributes.numberCorrect = 0;
+  }
   console.log(flashcards);
   console.log(flashcards.length);
   var random = Math.floor(Math.random() * numCards);

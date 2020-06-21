@@ -21,8 +21,11 @@
   Alexa Developer Console
   ![Third](https://user-images.githubusercontent.com/43560455/85236828-43cb6d80-b3d6-11ea-937c-4db6b5f05f37.png)
 
+  AWS Lambda Function, where we initially developed the handler functions
+  ![Fourth](https://user-images.githubusercontent.com/43560455/85237130-25b33c80-b3d9-11ea-835d-a6cb8a8bba84.png)
+
   Apache Web Server Config
-  ![Fourth](https://tristanluther.com/beaverhacks/capture.PNG)
+  ![Fifth](https://tristanluther.com/beaverhacks/capture.PNG)
 
 <h2>What We Learned</h2>
   It was our first time making new Amazon Alexa skills. We learned how to create a skill, an invocation, and intents that form a model Alexa can use to interact with a user via speech commands. We also learned how to create handlers for mapping user voice commands to Alexa responses. This was the first time our team had set-up a subdomain as well with the alexa subdomain and the first time experimenting with reverse proxies.
